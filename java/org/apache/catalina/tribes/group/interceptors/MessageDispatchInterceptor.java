@@ -29,6 +29,8 @@ import org.apache.catalina.tribes.transport.bio.util.LinkObject;
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
 
+import edu.illinois.keshmesh.annotations.EntryPoint;
+
 /**
  *
  * The message dispatcher is a way to enable asynchronous communication
@@ -172,6 +174,7 @@ public class MessageDispatchInterceptor extends ChannelInterceptorBase implement
         super.stop(svc);
     }
 
+    @EntryPoint
     @Override
     public void run() {
         while ( run ) {

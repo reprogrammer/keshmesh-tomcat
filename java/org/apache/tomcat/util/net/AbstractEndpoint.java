@@ -37,6 +37,8 @@ import org.apache.tomcat.util.threads.ResizableExecutor;
 import org.apache.tomcat.util.threads.TaskQueue;
 import org.apache.tomcat.util.threads.TaskThreadFactory;
 import org.apache.tomcat.util.threads.ThreadPoolExecutor;
+
+import edu.illinois.keshmesh.annotations.EntryPoint;
 /**
  *
  * @author fhanik
@@ -574,6 +576,11 @@ public abstract class AbstractEndpoint {
             bindState = BindState.BOUND_ON_START;
         }
         startInternal();
+    }
+
+    @EntryPoint
+    public static void main(String[] args) {
+      new AprEndpoint().startAcceptorThreads();
     }
 
     protected final void startAcceptorThreads() {

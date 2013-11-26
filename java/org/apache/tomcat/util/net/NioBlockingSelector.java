@@ -36,6 +36,8 @@ import org.apache.juli.logging.LogFactory;
 import org.apache.tomcat.util.ExceptionUtils;
 import org.apache.tomcat.util.net.NioEndpoint.KeyAttachment;
 
+import edu.illinois.keshmesh.annotations.EntryPoint;
+
 public class NioBlockingSelector {
 
     private static final Log log = LogFactory.getLog(NioBlockingSelector.class);
@@ -312,6 +314,7 @@ public class NioBlockingSelector {
             return result;
         }
 
+        @EntryPoint
         @Override
         public void run() {
             while (run) {

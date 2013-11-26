@@ -24,6 +24,8 @@ import java.text.DecimalFormat;
 
 import org.apache.catalina.tribes.io.XByteBuffer;
 
+import edu.illinois.keshmesh.annotations.EntryPoint;
+
 public class SocketTribesReceive {
     static long start = 0;
     static double mb = 0;
@@ -36,6 +38,7 @@ public class SocketTribesReceive {
     static BigDecimal bytes = new BigDecimal((double)32871);
 
 
+    @EntryPoint
     public static void main(String[] args) throws Exception {
         int size = 43800;
         if (args.length > 0 ) try {size=Integer.parseInt(args[0]);}catch(Exception x){ /* Ignore */ }
