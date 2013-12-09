@@ -30,6 +30,8 @@ import org.apache.naming.ContextBindings;
 import org.apache.naming.NamingContext;
 import org.apache.naming.SelectorContext;
 
+import edu.illinois.keshmesh.annotations.EntryPoint;
+
 /**
  * Context factory for the "java:" namespace.
  * <p>
@@ -94,6 +96,7 @@ public class javaURLContextFactory
     /**
      * Get a new (writable) initial context.
      */
+    @EntryPoint
     public Context getInitialContext(Hashtable<?,?> environment)
         throws NamingException {
         if (ContextBindings.isThreadBound() || 
