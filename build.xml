@@ -169,6 +169,7 @@
   <path id="compile.classpath">
     <pathelement location="${jdt.jar}"/>
     <pathelement location="${npn.jar}"/>
+    <pathelement location="${base.path}/annotations.jar"/>
   </path>
 
   <path id="tomcat.classpath">
